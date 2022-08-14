@@ -1,0 +1,17 @@
+spring:
+  master:
+    datasource:
+      hikari:
+        jdbc-url: jdbc:mysql://localhost:3308/master-slave-test
+        username: root
+        password: 123456
+  slave1:
+    datasource:
+      hikari:
+        jdbc-url: jdbc:mysql://localhost:3309/master-slave-test
+        username: root
+        password: 123456
+
+mybatis:
+  type-aliases-package: com.example.sqlrouter.entity
+  mapper-locations: classpath*:com/example/sqlrouter/dao/*.xml
